@@ -356,7 +356,11 @@ public class SegmentedRaftLogCache {
     TruncationSegments purge(long index) {
       try (AutoCloseableLock writeLock = writeLock()) {
         int segmentIndex = binarySearch(index);
-        List<SegmentFileInfo> list = new ArrayList<>();
+        if (segmentIndex == -1) {
+          // nothing to purge
+          return null;
+        }
+        List<SegmentFileInfo> list = new LinkedList<>();
 
         if (segmentIndex == -segments.size() - 1) {
           for (LogSegment ls : segments) {
