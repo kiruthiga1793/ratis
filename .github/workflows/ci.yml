@@ -60,6 +60,7 @@ jobs:
                 chmod +x ./dev-support/checks/examples.sh  # Make the script executable
                 ./dev-support/checks/examples.sh  # Execute the script
          - name: Example action step
+           uses: ./.github/workflows/check.yml
            with:
               script: compile
               timeout-minutes: 30
