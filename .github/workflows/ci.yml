@@ -53,9 +53,8 @@ jobs:
   examples:
     needs:
       - build
-    uses: ./.github/workflows/check.yml
     steps:
-      - name: Run examples.sh from the new job
+        uses: ./.github/workflows/check.yml
         run: |
           chmod +x ./dev-support/checks/examples.sh  # Make the script executable
           ./dev-support/checks/examples.sh  # Execute the script
