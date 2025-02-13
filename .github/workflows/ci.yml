@@ -58,8 +58,8 @@ jobs:
     steps:
          - name : Run examples.sh
            run: |  
-                chmod +x ./dev-support/checks/examples.sh  # Make the script executable
-                ./dev-support/checks/examples.sh  # Execute the script
+                chmod +x  dev-support/checks/examples.sh  # Make the script executable
+                 dev-support/checks/examples.sh  # Execute the script
          - name: Example action step
            uses: ./.github/workflows/check.yml
            with:
