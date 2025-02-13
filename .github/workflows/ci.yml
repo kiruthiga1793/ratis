@@ -60,6 +60,10 @@ jobs:
            uses: actions/checkout@v3
          - name: List contents of dev-support/checks directory
            run: ls -R dev-support/checks
+         - name: build build.sh
+           run: |
+             chmod +x  dev-support/checks/build.sh
+             dev-support/checks/build.sh  # Execute the script
          - name : Run examples.sh
            run: |  
                 chmod +x  dev-support/checks/examples.sh  # Make the script executable
