@@ -53,12 +53,13 @@ jobs:
   examples:
     needs:
       - build
-      
+
     steps:
-        uses: ./.github/workflows/check.yml
-        run: |
-          chmod +x ./dev-support/checks/examples.sh  # Make the script executable
-          ./dev-support/checks/examples.sh  # Execute the script
+         - name : Run examples.sh
+           uses: ./.github/workflows/check.yml
+           run: |  
+                chmod +x ./dev-support/checks/examples.sh  # Make the script executable
+                ./dev-support/checks/examples.sh  # Execute the script
     with:
       script: compile
       timeout-minutes: 30
