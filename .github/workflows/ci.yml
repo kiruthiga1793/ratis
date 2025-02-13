@@ -51,6 +51,7 @@ jobs:
     secrets: inherit
 
   examples:
+    runs-on: ubuntu-20.04
     needs:
       - build
 
