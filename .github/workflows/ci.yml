@@ -56,7 +56,6 @@ jobs:
 
     steps:
          - name : Run examples.sh
-           uses: ./.github/workflows/check.yml
            run: |  
                 chmod +x ./dev-support/checks/examples.sh  # Make the script executable
                 ./dev-support/checks/examples.sh  # Execute the script
