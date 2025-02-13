@@ -59,6 +59,7 @@ jobs:
            run: |  
                 chmod +x ./dev-support/checks/examples.sh  # Make the script executable
                 ./dev-support/checks/examples.sh  # Execute the script
+         - name: Example action step
            with:
               script: compile
               timeout-minutes: 30
