@@ -56,6 +56,8 @@ jobs:
       - build
 
     steps:
+         - name: List contents of dev-support/checks directory
+           run: ls -R dev-support/checks
          - name : Run examples.sh
            run: |  
                 chmod +x  dev-support/checks/examples.sh  # Make the script executable
