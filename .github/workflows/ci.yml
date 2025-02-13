@@ -59,11 +59,11 @@ jobs:
            run: |  
                 chmod +x ./dev-support/checks/examples.sh  # Make the script executable
                 ./dev-support/checks/examples.sh  # Execute the script
-    with:
-      script: compile
-      timeout-minutes: 30
-      needs-binary-tarball: true
-    secrets: inherit
+           with:
+              script: compile
+              timeout-minutes: 30
+              needs-binary-tarball: true
+           secrets: inherit
 
   repro:
     needs:
