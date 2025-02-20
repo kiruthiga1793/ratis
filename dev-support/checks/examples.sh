@@ -18,6 +18,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 
 echo $DIR
 
+source $DIR/build.sh
+
 EXAMPLES_DIR=${DIR}/../../
 
 source $EXAMPLES_DIR/ratis-examples/src/main/bin/server.sh
