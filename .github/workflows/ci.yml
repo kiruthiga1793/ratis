@@ -51,29 +51,14 @@ jobs:
     secrets: inherit
 
   examples:
-    runs-on: ubuntu-20.04
     needs:
       - build
-
-    steps:
-         - name: Checkout code
-           uses: actions/checkout@v3
-         - name: List contents of dev-support/checks directory
-           run: ls -R dev-support/checks
-         - name: build build.sh
-           run: |
-             chmod +x  dev-support/checks/build.sh
-             dev-support/checks/build.sh  # Execute the script
-         - name : Run examples.sh
-           run: |  
-                chmod +x  dev-support/checks/examples.sh  # Make the script executable
-                 dev-support/checks/examples.sh  # Execute the script
-         - name: Example action step
-           uses: ./.github/workflows/check.yml
-           with:
-              script: compile
-              timeout-minutes: 30
-              needs-binary-tarball: true
+    uses: ./.github/workflows/check.yml
+    with:
+          needs-binary-tarball: true
+          script: examples
+          timeout-minutes: 30
+    secrets: inherit
 
   repro:
     needs:

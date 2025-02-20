@@ -20,24 +20,4 @@ echo $DIR
 
 EXAMPLES_DIR=${DIR}/../../
 
-source $EXAMPLES_DIR/ratis-examples/src/main/bin/common.sh
-
-
-
-USAGE="examples.sh arithmetic <subcommand>"
-
-
-
-subcommand="$1"
-shift
-
-tmp="${TMPDIR:-/tmp}"
-
-echo "Starting Arithmetic server with '${subcommand}' with directories in '${tmp}' as local storage"
-
-$DIR/examples.sh arithmetic "$subcommand" --id n0 --storage "${tmp}/n0" $QUORUM_OPTS &
-$DIR/examples.sh arithmetic "$subcommand" --id n1 --storage "${tmp}/n1" $QUORUM_OPTS &
-$DIR/examples.sh arithmetic "$subcommand" --id n2 --storage "${tmp}/n2" $QUORUM_OPTS &
-
-echo "Waiting for the servers"
-
+source $EXAMPLES_DIR/ratis-examples/src/main/bin/server.sh
