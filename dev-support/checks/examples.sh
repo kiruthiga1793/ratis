@@ -23,3 +23,5 @@ source $DIR/build.sh
 EXAMPLES_DIR=${DIR}/../../
 
 source $EXAMPLES_DIR/ratis-examples/src/main/bin/server.sh
+
+source $EXAMPLES_DIR/ratis-examples/src/main/bin/start-all.sh arithmetic server
