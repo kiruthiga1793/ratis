@@ -16,6 +16,8 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 
+echo "SCRIPT_DIR inside common.sh"  $SCRIPT_DIR
+
 LIB_DIR=${SCRIPT_DIR}/../lib
 
 if [[ -d "$LIB_DIR" ]]; then
@@ -25,6 +27,7 @@ if [[ -d "$LIB_DIR" ]]; then
 else
    #development directory layout
    EXAMPLES_DIR=${SCRIPT_DIR}/../../../
+   echo "Printing examples Dir inside common.sh"  $EXAMPLES_DIR
    if [[ -d "$EXAMPLES_DIR" ]]; then
       EXAMPLES_DIR=`cd ${EXAMPLES_DIR} > /dev/null; pwd`
    fi
@@ -41,6 +44,7 @@ echo "Found ${ARTIFACT}"
 QUORUM_OPTS="--peers n0:localhost:6000,n1:localhost:6001,n2:localhost:6002"
 
 CONF_DIR="$DIR/../conf"
+echo "CONF_DIR" $CONF_DIR
 if [[ -d "${CONF_DIR}" ]]; then
   LOGGER_OPTS="-Dlog4j.configuration=file:${CONF_DIR}/log4j.properties"
 else
