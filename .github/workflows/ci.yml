@@ -54,18 +54,11 @@ jobs:
     needs:
       - build
     uses: ./.github/workflows/check.yml
-    steps:
-          - name: run maven build
-            with:
-                needs-binary-tarball: true
-                script: build
-                timeout-minutes: 30
-          - name:  run examples script
-            with:
-              needs-binary-tarball: true
-              script: examples
-              timeout-minutes: 30
-            secrets: inherit
+    with:
+          needs-binary-tarball: true
+          script: examples
+          timeout-minutes: 30
+    secrets: inherit
 
   repro:
     needs:
