@@ -26,5 +26,7 @@ cd  ratis-examples/src/main/bin
 
 echo $EXAMPLES_DIR/ratis-examples/src/main/bin
 
-source /server.sh
+SERVER_DIR=$EXAMPLES_DIR/ratis-examples/src/main/bin
+
+source $SERVER_DIR/server.sh
 
