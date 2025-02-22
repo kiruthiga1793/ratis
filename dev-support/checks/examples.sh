@@ -25,5 +25,5 @@ echo $EXAMPLES_DIR
 
 cd $EXAMPLES_DIR/ratis-examples/src/main/bin
 
-$ ./server.sh
+source /server.sh
 
