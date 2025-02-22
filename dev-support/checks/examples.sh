@@ -18,7 +18,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 
 echo $DIR
 
-source build.sh
+./$DIR/build.sh
 
 EXAMPLES_DIR=${DIR}/../../
 
