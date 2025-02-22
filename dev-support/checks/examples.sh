@@ -26,7 +26,7 @@ cd  ratis-examples/src/main/bin
 
 echo $EXAMPLES_DIR/ratis-examples/src/main/bin
 
-SERVER_DIR=$EXAMPLES_DIR/ratis-examples/src/main/bin
+ARITH_SERVER_DIR=$EXAMPLES_DIR/ratis-examples/src/main/bin
 
-source $SERVER_DIR/server.sh
+source ARITH_SERVER_DIR/start-all.sh arithmetic server
 
