@@ -21,7 +21,7 @@ echo $DIR
 
 EXAMPLES_DIR=${DIR}/../../
 
-echo $EXAMPLES_DIR
+echo "EXAMPLES_DIR"   $EXAMPLES_DIR
 
 cd $EXAMPLES_DIR/ratis-examples/src/main/bin
 
