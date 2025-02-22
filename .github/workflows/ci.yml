@@ -65,7 +65,7 @@ jobs:
               needs-binary-tarball: true
               script: examples
               timeout-minutes: 30
-    secrets: inherit
+            secrets: inherit
 
   repro:
     needs:
