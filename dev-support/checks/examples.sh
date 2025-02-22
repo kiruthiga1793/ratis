@@ -22,7 +22,7 @@ EXAMPLES_DIR=${DIR}/../../
 
 echo "EXAMPLES_DIR"   $EXAMPLES_DIR
 
-cd $EXAMPLES_DIR/ratis-examples/src/main/bin
+cd  ratis-examples/src/main/bin
 
 echo $EXAMPLES_DIR/ratis-examples/src/main/bin
 
