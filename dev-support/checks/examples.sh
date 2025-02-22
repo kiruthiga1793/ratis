@@ -18,9 +18,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 
 echo $DIR
 
-
-
-EXAMPLES_DIR=${DIR} ..
+EXAMPLES_DIR=${DIR}/../../
 
 echo "EXAMPLES_DIR"   $EXAMPLES_DIR
 
