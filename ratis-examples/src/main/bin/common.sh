@@ -38,7 +38,7 @@ else
    JAR_PREFIX=`basename ${EXAMPLES_DIR}`
    echo "JAR_PREFIX inside common.sh"  $JAR_PREFIX
    echo "list target folder in examples dir"
-   ls -d ${EXAMPLES_DIR}/
+   ls -d ${EXAMPLES_DIR}/target/
    ARTIFACT=`ls -1 ${EXAMPLES_DIR}/target/${JAR_PREFIX}-*.jar | grep -v test | grep -v javadoc | grep -v sources | grep -v shaded`
    echo "Printing Artifacts inside common.sh"  $ARTIFACT
    if [[ ! -f "$ARTIFACT" ]]; then
