@@ -37,7 +37,7 @@ else
    fi
    JAR_PREFIX=`basename ${EXAMPLES_DIR}`
    echo "JAR_PREFIX inside common.sh"  $JAR_PREFIX
-   ARTIFACT=`ls -1 ${EXAMPLES_DIR}/target/${JAR_PREFIX}-3.2.0-SNAPSHOT.jar | grep -v test | grep -v javadoc | grep -v sources | grep -v shaded`
+   ARTIFACT=`ls -1 ${EXAMPLES_DIR}/target/${JAR_PREFIX}-*.jar | grep -v test | grep -v javadoc | grep -v sources | grep -v shaded`
    echo "Printing Artifacts inside common.sh"  $ARTIFACT
    if [[ ! -f "$ARTIFACT" ]]; then
       echo "Jar file is missing. Please do a full build (mvn clean package -DskipTests) first."
