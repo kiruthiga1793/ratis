@@ -20,10 +20,13 @@ echo "SCRIPT_DIR inside common.sh"  $SCRIPT_DIR
 
 LIB_DIR=${SCRIPT_DIR}/../lib
 
+echo "LIB_DIR inside common.sh"  $LIB_DIR
+
 if [[ -d "$LIB_DIR" ]]; then
    #release directory layout
    LIB_DIR=`cd ${LIB_DIR} > /dev/null; pwd`
    ARTIFACT=`ls -1 ${LIB_DIR}/*.jar`
+   echo "Printing ARTIFACT inside common.sh"   $ARTIFACT
 else
    #development directory layout
    EXAMPLES_DIR=${SCRIPT_DIR}/../../../
