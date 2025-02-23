@@ -21,6 +21,7 @@ echo "SCRIPT_DIR inside common.sh"  $SCRIPT_DIR
 LIB_DIR=${SCRIPT_DIR}/../lib
 
 echo "LIB_DIR inside common.sh"  $LIB_DIR
+echo ""
 
 if [[ -d "$LIB_DIR" ]]; then
    #release directory layout
@@ -35,7 +36,9 @@ else
       EXAMPLES_DIR=`cd ${EXAMPLES_DIR} > /dev/null; pwd`
    fi
    JAR_PREFIX=`basename ${EXAMPLES_DIR}`
+   echo "JAR_PREFIX inside common.sh"  $JAR_PREFIX
    ARTIFACT=`ls -1 ${EXAMPLES_DIR}/target/${JAR_PREFIX}-*.jar | grep -v test | grep -v javadoc | grep -v sources | grep -v shaded`
+   echo "Printing Artifacts inside common.sh"  $ARTIFACT
    if [[ ! -f "$ARTIFACT" ]]; then
       echo "Jar file is missing. Please do a full build (mvn clean package -DskipTests) first."
       exit -1
