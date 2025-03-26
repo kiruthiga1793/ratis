@@ -22,10 +22,7 @@ EXAMPLES_DIR=${DIR}/../../
 
 echo "EXAMPLES_DIR"   $EXAMPLES_DIR
 
-echo "Starting Maven clean install..."
 
-# Run the Maven clean and install command
-mvn clean install -DskipTests
 
 cd  ratis-examples/src/main/bin
 
