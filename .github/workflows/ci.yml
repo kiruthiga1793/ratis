@@ -55,7 +55,7 @@ jobs:
       - build
     uses: ./.github/workflows/check.yml
     with:
-          needs-binary-tarball: true
+          needs-source-tarball: true
           script: examples
           timeout-minutes: 30
     secrets: inherit
